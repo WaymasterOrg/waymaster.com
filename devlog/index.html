@@ -1,0 +1,40 @@
+---
+layout: default
+title: "Development Log"
+description: "Waymaster development log — granular technical updates, commits and build notes from the Waymaster software project."
+permalink: /devlog/
+---
+
+<div class="category-banner">
+  <div class="container">
+    <h1>DEV LOG</h1>
+    <p>Build Notes &bull; Commits &bull; Technical Updates &bull; Work in Progress</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-layout">
+      <div>
+        {% for entry in site.devlog %}
+        <a href="{{ entry.url | relative_url }}" class="devlog-entry">
+          <div class="post-meta">
+            <span class="post-date">{{ entry.date | date: "%d %b %Y" }}</span>
+            <span class="post-cat cat-devlog">DEV LOG</span>
+            {% if entry.version %}<span class="post-cat cat-software">{{ entry.version }}</span>{% endif %}
+          </div>
+          <h2>{{ entry.title }}</h2>
+          {% if entry.summary %}<p>{{ entry.summary }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <div class="sidebar-title"><span class="dot">●</span> Dev Log</div>
+          <p style="font-size:.85rem;margin-bottom:.8rem;">Short-form technical notes, build updates and commit summaries. For longer write-ups, see the <a href="/blog/software/" style="color:var(--phosphor);">software blog</a>.</p>
+        </div>
+        {% include sidebar.html %}
+      </aside>
+    </div>
+  </div>
+</section>

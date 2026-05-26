@@ -1,0 +1,188 @@
+---
+layout: default
+title: "Retro Navigation & Vehicle Intelligence for Classic Cars"
+description: "Waymaster is a retro-styled navigation and vehicle monitoring system built for classic cars — ASCII terminal and phosphor green vector display modes."
+---
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Vehicle Intelligence System</div>
+    <div class="hero-title">WAYMASTER</div>
+    <p class="hero-sub">Retro Navigation &amp; Car Intelligence &bull; For Classic Vehicles</p>
+    <p class="hero-desc">
+      A retro-styled navigation and vehicle monitoring system designed for classic cars.
+      Two display modes: ASCII terminal or phosphor green vector. Both feel exactly right.
+    </p>
+    <div class="hero-cta">
+      <a href="/about/" class="btn btn-primary">Discover Waymaster</a>
+      <a href="/devlog/" class="btn btn-secondary">Development Log</a>
+    </div>
+  </div>
+  <div class="hero-status">
+    <span>SYSTEM ONLINE</span>
+    <span>GPS LOCKED</span>
+    <span>OBD-II ACTIVE</span>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 001 — What is Waymaster</span>
+      <h2 class="section-title">INTELLIGENCE FOR IRON</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>BUILT FOR THE CLASSICS</h3>
+        <p>Modern sat-nav belongs in modern cars. Waymaster is something different — a retro-styled navigation and vehicle intelligence system designed to feel native to the vehicles that inspired it.</p>
+        <p>Borrowing its aesthetic from 1970s and 80s computing — phosphor green displays, ASCII interfaces, vector graphics — Waymaster layers contemporary home-automation technology underneath a surface that belongs in a period-correct dashboard.</p>
+        <p>Route guidance, OBD-II vehicle diagnostics, temperature monitoring, fuel management — all presented the way they would have looked if this software had existed when your car rolled off the line.</p>
+        <a href="/about/" class="btn btn-secondary btn-sm" style="margin-top:.8rem;">Full Overview ►</a>
+      </div>
+      <div class="mode-cards">
+        <div class="mode-card">
+          <span class="mode-label">Display Mode A</span>
+          <h4>ASCII TERMINAL</h4>
+          <p>Pure character-art interface. Every piece of information rendered in text, symbols and line art. Readable on any screen.</p>
+          <div class="ascii-mock">+--[ WAYMASTER ]--[ NAV ]--+
+| HEADING  : 247° WSW      |
+| SPEED    : 47 MPH        |
+| NEXT     : LEFT 0.3m     |
+| ETA      : 14:32         |
+| OIL TEMP : 82°C  [OK]   |
+| FUEL     : ████░░ 68%    |
++--------------------------+</div>
+        </div>
+        <div class="mode-card">
+          <span class="mode-label">Display Mode B</span>
+          <h4>GREEN VECTOR</h4>
+          <p>Vector-drawn graphics on a phosphor green screen. Roads, compass arcs and instrument gauges rendered as luminous lines — like a 1983 arcade cabinet built into your fascia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES TEASER -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 002 — Capabilities</span>
+      <h2 class="section-title">SYSTEM FEATURES</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">◈</span>
+        <h3>Turn-by-Turn Navigation</h3>
+        <p>Route guidance with voice output and visual display. OSM map data, offline-capable. Both ASCII and vector rendering modes.</p>
+        <span class="feature-status status-dev">In Development</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⬡</span>
+        <h3>OBD-II Vehicle Monitoring</h3>
+        <p>Real-time engine data via OBD-II / CAN bus. Oil temp, coolant, RPM, fuel, fault codes — in period-correct gauges.</p>
+        <span class="feature-status status-live">Live</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">◉</span>
+        <h3>Green Vector Display</h3>
+        <p>Phosphor-green vector graphics on a dark screen. Roads, gauges and readouts as luminous linework.</p>
+        <span class="feature-status status-dev">In Development</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/features/" class="btn btn-secondary">All Features ►</a>
+    </div>
+  </div>
+</section>
+
+<!-- VEHICLES TEASER -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 003 — Test Platforms</span>
+      <h2 class="section-title">THE FLEET</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="vehicles-grid">
+      {% for vehicle in site.vehicles %}
+      <a href="{{ vehicle.url | relative_url }}" class="vehicle-card">
+        <div class="vehicle-card-header">
+          <div>
+            <span class="vehicle-id">{{ vehicle.unit_id }}</span>
+            <h3>{{ vehicle.make }}<small>{{ vehicle.model }}</small></h3>
+          </div>
+          <span class="vehicle-badge">{{ vehicle.badge }}</span>
+        </div>
+        <div class="vehicle-stats">
+          {% for spec in vehicle.specs limit:6 %}
+          <div class="stat-row">
+            <span class="stat-key">{{ spec[0] }}</span>
+            <span class="stat-val">{{ spec[1] }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        <p class="vehicle-card-desc">{{ vehicle.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- LATEST POSTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 004 — Latest Updates</span>
+      <h2 class="section-title">DISPATCH LOG</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="blog-layout">
+      <div class="post-list">
+        {% assign all_posts = site.posts | concat: site.devlog | sort: "date" | reverse %}
+        {% for post in all_posts limit:5 %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+            {% if post.collection == "devlog" %}
+            <span class="post-cat cat-devlog">DEV LOG</span>
+            {% elsif post.category %}
+            <span class="post-cat cat-{{ post.category }}">{{ post.category | upcase }}</span>
+            {% endif %}
+          </div>
+          <h2>{{ post.title }}</h2>
+          {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <div class="sidebar-title"><span class="dot">●</span> Categories</div>
+          <ul class="sidebar-links">
+            <li><a href="/blog/software/">Software <span class="count">{% assign n = site.posts | where:"category","software" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/mercedes/">Mercedes 560 SEC <span class="count">{% assign n = site.posts | where:"category","mercedes" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/vw/">VW T25 Camper <span class="count">{% assign n = site.posts | where:"category","vw" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/general/">General <span class="count">{% assign n = site.posts | where:"category","general" %}{{ n.size }}</span></a></li>
+            <li><a href="/devlog/">Dev Log <span class="count">{{ site.devlog.size }}</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-title">Vehicles</div>
+          <ul class="sidebar-links">
+            {% for vehicle in site.vehicles %}
+            <li><a href="{{ vehicle.url | relative_url }}">{{ vehicle.make }} {{ vehicle.model }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="/blog/" class="btn btn-secondary">All Blog Posts ►</a>
+      <a href="/devlog/" class="btn btn-secondary">Dev Log ►</a>
+    </div>
+  </div>
+</section>

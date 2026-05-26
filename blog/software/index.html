@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Software Development"
+description: "Waymaster software development updates — navigation engine, display modes, OBD-II integration and more."
+permalink: /blog/software/
+---
+
+<div class="category-banner">
+  <div class="container">
+    <h1>SOFTWARE</h1>
+    <p>Navigation Engine &bull; Display Modes &bull; OBD-II Integration &bull; System Architecture</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-layout">
+      <div class="post-list">
+        {% assign cat_posts = site.posts | where: "category", "software" %}
+        {% for post in cat_posts %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+            <span class="post-cat cat-software">SOFTWARE</span>
+          </div>
+          <h2>{{ post.title }}</h2>
+          {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% include sidebar.html %}
+    </div>
+  </div>
+</section>

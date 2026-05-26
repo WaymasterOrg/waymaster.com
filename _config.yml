@@ -1,0 +1,58 @@
+title: "Waymaster"
+tagline: "Retro Navigation & Vehicle Intelligence for Classic Cars"
+description: "Waymaster is a retro-styled navigation and vehicle monitoring system built for classic cars. Follow the development of the software and the restoration of our two test vehicles — a Mercedes 560 SEC and a VW T25 Westfalia."
+url: "https://waymaster.com"
+baseurl: ""
+author: "Waymaster"
+email: "hello@waymaster.com"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  devlog:
+    output: true
+    permalink: /devlog/:year/:month/:slug/
+  vehicles:
+    output: true
+    permalink: /vehicles/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "devlog"
+    values:
+      layout: "devlog"
+  - scope:
+      path: ""
+      type: "vehicles"
+    values:
+      layout: "vehicle"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Categories for posts — used in URL structure
+category_path:
+  software: software
+  mercedes: mercedes
+  vw: vw
+  general: general

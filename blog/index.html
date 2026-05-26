@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Blog"
+description: "Development updates, mechanical restoration and electrical work on the Mercedes 560 SEC and VW T25 Westfalia — the Waymaster test vehicles."
+permalink: /blog/
+---
+
+<div class="category-banner">
+  <div class="container">
+    <h1>DISPATCH LOG</h1>
+    <p>Software Updates &bull; Mechanical Work &bull; Electrical &bull; Restoration</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-layout">
+      <div class="post-list">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+            {% if post.category %}
+            <span class="post-cat cat-{{ post.category }}">{{ post.category | upcase }}</span>
+            {% endif %}
+          </div>
+          <h2>{{ post.title }}</h2>
+          {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <div class="sidebar-title"><span class="dot">●</span> Filter by Category</div>
+          <ul class="sidebar-links">
+            <li><a href="/blog/">All Posts <span class="count">{{ site.posts.size }}</span></a></li>
+            <li><a href="/blog/software/">Software <span class="count">{% assign n = site.posts | where:"category","software" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/mercedes/">Mercedes 560 SEC <span class="count">{% assign n = site.posts | where:"category","mercedes" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/vw/">VW T25 Camper <span class="count">{% assign n = site.posts | where:"category","vw" %}{{ n.size }}</span></a></li>
+            <li><a href="/blog/general/">General <span class="count">{% assign n = site.posts | where:"category","general" %}{{ n.size }}</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-title">Dev Log</div>
+          <ul class="sidebar-links">
+            <li><a href="/devlog/">All Dev Log Entries <span class="count">{{ site.devlog.size }}</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-title">Vehicles</div>
+          <ul class="sidebar-links">
+            {% for vehicle in site.vehicles %}
+            <li><a href="{{ vehicle.url | relative_url }}">{{ vehicle.make }} {{ vehicle.model }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

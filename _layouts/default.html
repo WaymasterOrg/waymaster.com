@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} // {% endif %}WAYMASTER</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  {% seo %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="{% if page.title %}{{ page.title }}{% else %}Waymaster{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url"         content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name"   content="Waymaster">
+  <meta property="og:type"        content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<nav class="site-nav">
+  <a href="{{ '/' | relative_url }}" class="nav-logo">WAY<span>//</span>MASTER</a>
+  <ul class="nav-links">
+    <li><a href="{{ '/about/' | relative_url }}"     {% if page.url contains '/about'    %}class="active"{% endif %}>About</a></li>
+    <li><a href="{{ '/features/' | relative_url }}"  {% if page.url contains '/features' %}class="active"{% endif %}>Features</a></li>
+    <li><a href="{{ '/vehicles/' | relative_url }}"  {% if page.url contains '/vehicles' %}class="active"{% endif %}>Vehicles</a></li>
+    <li><a href="{{ '/blog/' | relative_url }}"      {% if page.url contains '/blog'     %}class="active"{% endif %}>Blog</a></li>
+    <li><a href="{{ '/devlog/' | relative_url }}"    {% if page.url contains '/devlog'   %}class="active"{% endif %}>Dev Log</a></li>
+  </ul>
+  <span class="nav-clock" id="nav-clock"></span>
+</nav>
+
+<div class="page-wrap">
+  {{ content }}
+</div>
+
+<footer class="site-footer">
+  <span class="footer-logo">WAYMASTER</span>
+  <p class="footer-tagline">Retro Navigation &bull; Vehicle Intelligence &bull; Classic Cars</p>
+  <ul class="footer-nav">
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/features/' | relative_url }}">Features</a></li>
+    <li><a href="{{ '/vehicles/' | relative_url }}">Vehicles</a></li>
+    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/devlog/' | relative_url }}">Dev Log</a></li>
+    <li><a href="mailto:hello@waymaster.com">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} Waymaster // waymaster.com // All rights reserved</p>
+</footer>
+
+<script>
+  // Clock
+  function tick() {
+    const n = new Date();
+    const p = v => String(v).padStart(2,'0');
+    const el = document.getElementById('nav-clock');
+    if (el) el.textContent = p(n.getHours())+':'+p(n.getMinutes())+':'+p(n.getSeconds());
+  }
+  setInterval(tick, 1000); tick();
+</script>
+
+</body>
+</html>

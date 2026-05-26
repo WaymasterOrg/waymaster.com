@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<nav class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <span>›</span>
+  <a href="{{ '/vehicles/' | relative_url }}">Vehicles</a>
+  <span>›</span>
+  {{ page.title }}
+</nav>
+
+<header class="vehicle-page-header">
+  <div class="container">
+    <span class="vehicle-id">{{ page.unit_id }}</span>
+    <h1>{{ page.make }}<small>{{ page.model }}</small></h1>
+    <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--amber);letter-spacing:.18em;text-transform:uppercase;margin:.6rem 0 0;">
+      {{ page.badge }}
+    </p>
+    <div class="vehicle-specs-grid">
+      {% for spec in page.specs %}
+      <div class="stat-row">
+        <span class="stat-key">{{ spec[0] }}</span>
+        <span class="stat-val">{{ spec[1] }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <div class="container">
+    <div class="blog-layout">
+      <article class="post-content">
+        {{ content }}
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <div class="sidebar-title"><span class="dot">●</span> Posts About This Vehicle</div>
+          <ul class="sidebar-links">
+            {% assign cat = page.category %}
+            {% assign vehicle_posts = site.posts | where: "category", cat %}
+            {% for p in vehicle_posts limit:10 %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title }}<span class="count">{{ p.date | date: "%b %y" }}</span></a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

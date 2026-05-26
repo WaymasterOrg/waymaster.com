@@ -1,0 +1,40 @@
+---
+layout: default
+title: "The Fleet"
+description: "The Waymaster test vehicles — a Mercedes-Benz 560 SEC W126 and a Volkswagen T25 Westfalia camper van."
+permalink: /vehicles/
+---
+
+<div class="category-banner">
+  <div class="container">
+    <h1>THE FLEET</h1>
+    <p>Test Platforms &bull; Restoration &bull; Waymaster Integration</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="vehicles-grid">
+      {% for vehicle in site.vehicles %}
+      <a href="{{ vehicle.url | relative_url }}" class="vehicle-card">
+        <div class="vehicle-card-header">
+          <div>
+            <span class="vehicle-id">{{ vehicle.unit_id }}</span>
+            <h3>{{ vehicle.make }}<small>{{ vehicle.model }}</small></h3>
+          </div>
+          <span class="vehicle-badge">{{ vehicle.badge }}</span>
+        </div>
+        <div class="vehicle-stats">
+          {% for spec in vehicle.specs limit:6 %}
+          <div class="stat-row">
+            <span class="stat-key">{{ spec[0] }}</span>
+            <span class="stat-val">{{ spec[1] }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        <p class="vehicle-card-desc">{{ vehicle.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
