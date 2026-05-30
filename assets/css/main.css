@@ -67,7 +67,7 @@ body::before {
    NAVIGATION — 80s computer bezel aesthetic
    ============================================================ */
 .site-nav {
-  position: fixed; top:0; left:0; right:0; z-index:1000;
+  position: fixed; top:0; left:0; right:0; z-index:10000;
   background: linear-gradient(180deg, #d6d0c4 0%, #c8c2b4 40%, #b8b2a4 100%);
   border-top: 2px solid #e8e2d6;
   border-bottom: 3px solid #7a7468;
