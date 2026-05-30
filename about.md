@@ -13,7 +13,7 @@ permalink: /about/
 </div>
 
 <section class="section">
-  <div class="container--narrow post-content">
+  <div class="container--narrow post-content" markdown="1">
 
 ## The Problem With Modern Sat-Nav in Classic Cars
 
