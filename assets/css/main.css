@@ -64,60 +64,99 @@ body::before {
 }
 
 /* ============================================================
-   NAVIGATION
+   NAVIGATION — 80s computer bezel aesthetic
    ============================================================ */
 .site-nav {
   position: fixed; top:0; left:0; right:0; z-index:1000;
-  background: rgba(1,8,2,0.93);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(4px);
-  height: 56px;
+  background: linear-gradient(180deg, #d6d0c4 0%, #c8c2b4 40%, #b8b2a4 100%);
+  border-top: 2px solid #e8e2d6;
+  border-bottom: 3px solid #7a7468;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    inset 0 -1px 0 rgba(0,0,0,0.15),
+    0 2px 8px rgba(0,0,0,0.5);
+  height: 64px;
   display: flex; align-items: center;
-  padding: 0 2rem;
-  gap: 2rem;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
 }
+
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  color: var(--phosphor);
-  text-decoration: none;
-  text-shadow: 0 0 12px var(--phosphor);
-  animation: glow-pulse 5s ease-in-out infinite;
-  letter-spacing: .06em;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
+  background: linear-gradient(160deg, #b0aa9e 0%, #c4beb2 50%, #d0cabc 100%);
+  border-radius: 4px;
+  padding: .3rem .8rem .3rem .5rem;
+  border-top: 1px solid #8a8478;
+  border-left: 1px solid #8a8478;
+  border-bottom: 1px solid #e0dace;
+  border-right: 1px solid #e0dace;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), inset -1px -1px 2px rgba(255,255,255,0.3);
 }
-.nav-logo span { color: var(--amber); text-shadow: 0 0 10px var(--amber); }
-.nav-links { display:flex; gap:.1rem; list-style:none; flex:1; }
+.nav-logo img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(0.15);
+  display: block;
+}
+
+.nav-links { display:flex; gap:.4rem; list-style:none; flex:1; }
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: .72rem;
-  color: var(--phosphor-dim);
+  font-size: .68rem;
+  color: #3a3630;
   text-decoration: none;
-  padding: .35rem .7rem;
-  border: 1px solid transparent;
-  letter-spacing: .12em;
+  padding: .32rem .75rem;
+  letter-spacing: .1em;
   text-transform: uppercase;
-  transition: all .15s;
+  transition: all .12s;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #cec8bc 0%, #bab4a8 100%);
+  border-top: 1px solid #dedad0;
+  border-left: 1px solid #d4cec4;
+  border-bottom: 1px solid #888278;
+  border-right: 1px solid #908a80;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
 }
-.nav-links a:hover,
+.nav-links a:hover {
+  color: #1a1614;
+  background: linear-gradient(180deg, #d8d2c6 0%, #c4beb2 100%);
+}
 .nav-links a.active {
-  color: var(--phosphor);
-  border-color: var(--border);
-  background: var(--phosphor-glow);
-  text-shadow: 0 0 8px var(--phosphor);
+  color: #1a1614;
+  background: linear-gradient(180deg, #a8a298 0%, #b8b2a6 100%);
+  border-top: 1px solid #888278;
+  border-left: 1px solid #888278;
+  border-bottom: 1px solid #d4cec4;
+  border-right: 1px solid #cac4b8;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.25);
+  text-shadow: none;
 }
+
 .nav-clock {
   font-family: var(--font-mono);
   font-size: .65rem;
-  color: rgba(0,255,65,.35);
   letter-spacing: .12em;
   flex-shrink: 0;
+  background: #1a1e14;
+  color: #00cc33;
+  text-shadow: 0 0 6px rgba(0,204,51,0.7);
+  padding: .28rem .65rem;
+  border-radius: 2px;
+  border-top: 1px solid #0a0c08;
+  border-left: 1px solid #0a0c08;
+  border-bottom: 1px solid #3a3e30;
+  border-right: 1px solid #3a3e30;
+  box-shadow: inset 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 /* ============================================================
    PAGE WRAPPER
    ============================================================ */
-.page-wrap { padding-top: 56px; min-height: 100vh; }
+.page-wrap { padding-top: 64px; min-height: 100vh; }
 
 /* ============================================================
    HERO (homepage)
