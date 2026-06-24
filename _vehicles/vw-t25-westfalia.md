@@ -1,14 +1,14 @@
 ---
 layout: vehicle
-title: "Volkswagen T25 Westfalia"
+title: "1983 Volkswagen T25"
 unit_id: "UNIT-02"
 make: "Volkswagen"
-model: "T25  Westfalia Camper"
-badge: "SECONDARY TEST BED"
+model: "T25 Camper"
+badge: "TEST MULE"
 category: vw
 summary: "The T25 Westfalia represents the other extreme — a slow, loveable workhorse where Waymaster's camping and touring features find their natural home."
 specs:
-  - ["Year", "1984"]
+  - ["Year", "1983"]
   - ["Engine", "JX  1.6L Diesel"]
   - ["Gearbox", "4-spd Manual"]
   - ["Colour", "Pastel White"]
