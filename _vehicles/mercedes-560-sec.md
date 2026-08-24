@@ -3,8 +3,8 @@ layout: vehicle
 title: "Mercedes-Benz 560 SEC"
 unit_id: "UNIT-01"
 make: "Mercedes-Benz"
-model: "560 SEC  W126"
-badge: "PRIMARY TEST BED"
+model: "560 SEC W126"
+badge: "SHOWCASE VEHICLE"
 category: mercedes
 summary: "The flagship of the W126 generation and one of the finest grand tourers ever built. The SEC is Waymaster's primary target platform - if satnav was a thing in the 80's it would have been fitted to the highest-spec and most expensive vehicles."
 specs:
