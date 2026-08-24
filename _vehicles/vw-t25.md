@@ -4,45 +4,39 @@ title: "1983 Volkswagen T25"
 unit_id: "UNIT-02"
 make: "Volkswagen"
 model: "T25 Camper"
-badge: "TEST MULE"
+badge: "TEST BED"
 category: vw
-summary: "Our main test bed for Waymaster development - with plenty of interior space, it's easy to set up test harnesses and the multi-purpose nature of the vehicle means we can evaluate different use-cases."
+summary: "Our main test bed for Waymaster development - this is our vehicle for experimenting with the Waymaster setup."
 specs:
   - ["Year", "1983"]
-  - ["Engine", "JX  1.6L Diesel"]
+  - ["Engine", "CU 2.0L Petrol"]
   - ["Gearbox", "4-spd Manual"]
   - ["Colour", "Pastel White"]
-  - ["Mileage", "189,000 km"]
+  - ["Mileage", "92,000 miles"]
   - ["Status", "Restoration"]
-  - ["Suspension", "Torsion bar"]
-  - ["Body", "Westfalia Joker"]
+  - ["Body", "High-top"]
 ---
 
-## The Secondary Test Bed
+## The Primary Test Bed
 
-If the 560 SEC is Waymaster at 70mph on a motorway, the T25 is Waymaster on a mountain pass in the rain, running on a near-empty tank, with a sleeping bag drying on the dashboard. The T25 Westfalia tests a completely different set of priorities.
+The Volkswagen T25 — known as the T3 in mainland Europe and the Vanagon in North America — was built from 1979 to 1992 and represents the last of VW's rear-engined bus layout. This example is a 1983 high-top conversion which features internal cupboards, kitchen units, and a fold-out bed.
 
-The Volkswagen T25 — known as the T3 in mainland Europe and the Vanagon in North America — was built from 1979 to 1992 and represents the last of VW's rear-engined bus layout. This example is a 1984 Westfalia Joker conversion, the full-featured camper variant with the iconic elevating roof, kitchen unit, and fold-out bed.
+Our camper, called Arthur, has been around the block a few times. When we got him, he needed his fair share of repairs and is still undergoing further restoration.
+
+This really suited me as there's nothing particularly sacred about this car. The dashboard has already been hacked about with, the wiring is a mess, the interior is awful, it's all rusty... almost every component needs ripping out and starting again.
+
+This is great for me because it not only represents a great opportunity to document a fairly full restoration of a VW T25 van, it also means that whatever I want to build for Waymaster, I have no hangups or concerns about making a mess of this car. It's a mess already! Things can (hopefully) only get better.
 
 ## Current Status
 
-The T25 is currently undergoing a more substantial restoration than the SEC. The headline items:
-
-**Front suspension rebuild** — The T25 uses a torsion bar front suspension with king pins and link pins rather than conventional ball joints. The wear indicators were clear, and investigation revealed not just worn pins but a cracked front beam, requiring a replacement unit to be sourced and fitted.
-
-**Full electrical rewire** — The original wiring loom has suffered the typical age-related deterioration and a series of amateur additions over the decades. A full rewire is planned, which will also incorporate the Waymaster hardware installation from the outset.
-
-**Engine attention** — The 1.6 JX diesel is a simple, tough unit, but at 189,000 km it is overdue for careful inspection. Injectors, glowplugs and timing belt are all on the list.
+On the road and running, but he still needs an awful lot of welding, the interior really needs ripping out and starting again and there are numerous mechanical issues still to resolve.
 
 ## Waymaster Installation Plan
 
-The T25 installation will differ from the SEC. Given the camping focus:
+The great thing about the T25 is that there is an awful lot of space for new equipment and wiring to be installed. I don't know exactly what form Waymaster will eventually take, but in Arthur, I can easily fit a 10" rack with any computing equipment I need inside it, and with leisure batteries and solar panels installed, I don't have to worry too much about how much power Waymaster draws to begin with.
 
-- ASCII display mode as default — suits the more utilitarian character of the van
-- Emphasis on the trip planning and camping features: multi-stop routing, fuel stop calculation, overnight halt logging
-- A ruggedised installation that tolerates the vibration and temperature swings of a working camper
-- Integration with the rewired electrical system from the start, rather than retrofitted
+Furthermore, since Arther has literally no creature-comforts whatsoever, I'm free to retro-fit whatever I want and build up the technology from scratch. With the SEC, if I decided I wanted Waymaster to run the climate control, I'd be battling with understanding how the existing climate control works. In Arthur, there isn't any climate control to begin with, so I'm free to build it up from scratch.
 
-## Why the T25?
+Finally, the camping focus of Arthur opens up other avenues for Waymaster development. 1980s-style gauges and displays that give information relevant to a motorhome would look really cool inside Arthur. We're going to be creating a home automation system on wheels.
 
-Because Waymaster should work in the real world, not just the ideal world. A classic car show on a Sunday is one use case; a three-week trip through Scandinavia sleeping in laybys is another. The T25 tests whether Waymaster is genuinely useful — whether it adds something real to a journey — rather than just looking good on a dash.
+So, the T25 is now the test bed for developing and experimenting with the Waymaster software. At the end of this process, the 560 SEC will become the first vehicle to recieve the prototype of the finished software.
