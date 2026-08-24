@@ -18,27 +18,29 @@ specs:
   - ["Power", "~279 bhp"]
 ---
 
-## The Primary Test Bed
+## The Primary Target Platform
 
-The W126 560 SEC is the flagship of Mercedes-Benz's W126 generation — a grand tourer that was, at its launch, widely regarded as the finest car in the world. Its combination of long-distance refinement, a 5.5-litre V8 engine, and an interior that puts modern luxury cars to shame makes it the natural primary platform for Waymaster.
+The W126 560 SEC is the flagship of Mercedes-Benz's W126 generation — a grand tourer that was, at launch, one of the most expensive and highest-spec cars available. My initial thinking for Waymaster was that the type of technology it would represent would be the pinnacle of what was possible in my slightly skewed version of the 1980s. The concept was simple - imagine GPS had been widely available and that global mapping existed. Now, how would you package that into technology that was available in the 1980s?
 
-For Waymaster development, the SEC offers several advantages. Its long, quiet motorway cruising is the ideal environment for testing navigation software at pace. The large dashboard provides genuine space for a display installation that doesn't look afterthought. And the period-correct aesthetic of the cabin — dark wood, analogue instruments, proper upholstery — sets the tone that Waymaster is designed to complement rather than clash with.
+This led me to create my first iteration of the Waymaster software - a simple console-based mapping system that could store maps of the world with a reasonably small memory footprint, would display on terminal-only devices, and could essentially run on a computer that existed in the 1980s, albeit somewhat miniaturised for the time.
+
+My vision was that I just wanted a CRT screen fitted into the center console of the 560 SEC looking like it was designed to be there, running mapping software that can get you from A to B easily without looking out of place for a retro ride. What should then come after is the ability to operate the SEC's climate control, engine management and in car entertainment all from that screen.
 
 ## Current Status
 
-The car runs well but has been under active restoration since acquisition. The main mechanical focus has been on the **Bosch CIS-E Jetronic fuel injection system**, which had developed an idle hunt — rhythmic surging between approximately 500 and 900 rpm that required methodical diagnosis through the electrohydraulic actuator, differential pressure regulator, and auxiliary air valve.
-
-The cooling system has also been attended to, with new hoses, thermostat and a reconditioned expansion tank.
+My plan has been that the 560 SEC should act as my high-end demonstrator for the Waymaster software, which also means it needs to be in a reasonably good state of repair. Whilst the SEC has always run, it's needed a lot of work to bring it up to the state I believe it should be in. This is still ongoing.
 
 ## Waymaster Installation Plan
 
-The planned Waymaster hardware installation for the SEC will use:
+I really thought that the SEC would be the best test bed for Waymaster when we first got it. However, I've come to realise over time that it's really the end product for where Waymaster should end up.
 
-- A small single-board computer mounted in the boot, connected via CAN/K-line adapter to the OBD-II port
-- A 7-inch display panel fitted into a bespoke fascia insert, replacing the original cassette deck aperture
-- Vector display mode as default — the green phosphor on black suits the silver-and-dark interior perfectly
-- Wired into the ignition circuit to wake and sleep with the engine
+I can't really put test versions of Waymaster into the SEC - I'm not about to start drilling random holes into the dashboard, ripping out wiring, pulling everything apart for revision after revision of the hardware and software that will no doubt come about during development. There's two main reasons for this:
+
+1. Despite being a big car, the SEC is absolutely *crammed* with 80s technology. Pretty much every space is filled with something or other and a lot of wiring is buried under layers of sound insulation, other components and just... *stuff*. If I'm wiring something new into the SEC, I want it to be a fairly well developed system where I'm reasonably sure I'm doing the right thing rather than just experimenting - otherwise it's going to get time consuming and expensive.
+2. The design of the SEC demands something really high-end and well-finished is put into the cabin, otherwise it's just going to look a mess. I can't exactly screw a 7" screen onto the dashboard and call it a day. There's got to be a lot of development work going into the manufacturing and design of the Waymaster system to make it really fit in well with the high-end 80s aesthetic.
+
+My view now is that Waymaster in a 560 SEC is more of an end goal rather than an MVP.
 
 ## The Bigger Picture
 
-Beyond being a test bed, the SEC is a car worth preserving properly. Every repair and upgrade is documented on this site — not just because it contextualises the Waymaster installation, but because the W126 community deserves good technical documentation, and there isn't enough of it online.
+Beyond being a Waymaster showcase, the SEC is a car worth preserving properly. Every repair and upgrade is documented on this site — not just because it contextualises the Waymaster installation, but because the W126 community deserves good technical documentation, and there isn't enough of it online.
