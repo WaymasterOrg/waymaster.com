@@ -6,7 +6,7 @@ make: "Volkswagen"
 model: "T25 Camper"
 badge: "TEST MULE"
 category: vw
-summary: "The T25 Westfalia represents the other extreme — a slow, loveable workhorse where Waymaster's camping and touring features find their natural home."
+summary: "Our main test bed for Waymaster development - with plenty of interior space, it's easy to set up test harnesses and the multi-purpose nature of the vehicle means we can evaluate different use-cases."
 specs:
   - ["Year", "1983"]
   - ["Engine", "JX  1.6L Diesel"]
