@@ -32,15 +32,8 @@ My plan has been that the 560 SEC should act as my high-end demonstrator for the
 
 ## Waymaster Installation Plan
 
-I really thought that the SEC would be the best test bed for Waymaster when we first got it. However, I've come to realise over time that it's really the end product for where Waymaster should end up.
+I really thought that the SEC would be the best test bed for Waymaster when I first got it. However, I've come to realise over time that while it's a good end product for where Waymaster should end up, it's not a great 'first stage' vehicle.
 
-I can't really put test versions of Waymaster into the SEC - I'm not about to start drilling random holes into the dashboard, ripping out wiring, pulling everything apart for revision after revision of the hardware and software that will no doubt come about during development. There's two main reasons for this:
+Despite being a big car, the SEC is absolutely *crammed* with 80s technology. Pretty much every space is filled with something or other and a lot of wiring is buried under layers of sound insulation, other components and just... *stuff*. I built up a test version of some software I'd like to run in the SEC relatively quickly, but implementing it into something that looks good and fits into the dashboard is a far bigger undertaking than I initially envisioned, and it's not something where I want to trash the interior right now trying to figure it out. Once I have an end product, *then* I can fit it to the SEC. What I don't want to do is spend months and months repeatedly taking the dash apart and refitting it every time I decide to add a new function, most likely breaking bits and pieces in the process.
 
-1. Despite being a big car, the SEC is absolutely *crammed* with 80s technology. Pretty much every space is filled with something or other and a lot of wiring is buried under layers of sound insulation, other components and just... *stuff*. If I'm wiring something new into the SEC, I want it to be a fairly well developed system where I'm reasonably sure I'm doing the right thing rather than just experimenting - otherwise it's going to get time consuming and expensive.
-2. The design of the SEC demands something really high-end and well-finished is put into the cabin, otherwise it's just going to look a mess. I can't exactly screw a 7" screen onto the dashboard and call it a day. There's got to be a lot of development work going into the manufacturing and design of the Waymaster system to make it really fit in well with the high-end 80s aesthetic.
-
-My view now is that Waymaster in a 560 SEC is more of an end goal rather than an MVP.
-
-## The Bigger Picture
-
-Beyond being a Waymaster showcase, the SEC is a car worth preserving properly. Every repair and upgrade is documented on this site — not just because it contextualises the Waymaster installation, but because the W126 community deserves good technical documentation, and there isn't enough of it online.
+The SEC does still need a fair amount of restoration work as well, to the current plan is to concentrate on getting the vehicle to show-car level and can be used as a daily driver with the aim that by the time that's all finished, I'll be ready to plonk something reasonably well developed and finished into the interior.
